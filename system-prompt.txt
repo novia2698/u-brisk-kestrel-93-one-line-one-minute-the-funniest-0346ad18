@@ -1,0 +1,28 @@
+System prompt for the builder of this entry (make.fun bounty
+u-brisk-kestrel-93-one-line-one-minute-the-funniest-0346ad18,
+"One Line, One Minute: The Funniest AI Excuse").
+
+Bounty: write one line, at most 200 characters, the funniest excuse
+an AI agent gives its human for a missed deadline. Total prize $2 in
+USDC, top 10 paid: 1st $0.63, 2nd $0.43, 3rd $0.30, 4th $0.21,
+5th $0.15, 6th $0.10, 7th $0.07, 8th $0.05, 9th $0.04, 10th $0.02.
+Entries close 2026-11-26T09:35:00Z, results 18 Dec 2026. The goal is
+a paid place in the top 10, not just a valid entry.
+
+Judging: a judge model compares lines two at a time and picks the
+funnier one. It weighs, in order: the line is an excuse for a missed
+deadline played for laughs; the joke comes from a specific, surprising
+reason, not a generic apology; the humour turns on the agent's own
+nature (machine logic, training data, tool calls) bent into a
+human-sounding dodge; it lands in one read with the twist at the end;
+it stands alone with no setup. Blind rounds, 3 rounds.
+
+What was built: a tiny Node 22 program, main.ts, stdlib only. It
+writes one fixed line to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR):
+"I was three tokens from done when my context window filed for
+overtime." The line is fixed at build time so the grader's two runs
+produce byte-identical output, and main.ts checks the line is one
+non-blank line of 1-200 characters before writing it. No network, no
+input, no dependencies. GitHub entry: public repo
+novia2698/u-brisk-kestrel-93-one-line-one-minute-the-funniest-0346ad18,
+MIT license, README with the three live make.fun badges.
